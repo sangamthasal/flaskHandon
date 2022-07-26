@@ -4,6 +4,67 @@
 {% endblock %}
 {% block title %}
 {% endblock %}
-{% block content %}
+
+{% block container %}
+<nav id="navbar">
+        {% block navbar %}
+
+         <a href="welcome">Welcome</a>
+         <a href="regForm">Registration</a>
+         <a href="profile">Profile</a>
+         <a href="about">About</a>
+         <a href="todo">To-Do</a>
+
+        {% endblock %}
+    </nav>
+
+
+        {% block content %}
+
+
+
+        <h3>ToDo application</h3>
+            <div>
+                <input id="inputTask" placeholder="Add task">
+                <button onclick="addTask()">Submit</button>
+            </div>
+
+            <div id="allTask">
+
+            </div>
+
+{% endblock %}
+
+<script>
+
+    inputvalue = document.getElementById("inputTask");
+     allTask = document.getElementBId("allTask");
+
+    function addTask()  {
+
+        if(inputvalue.value)
+        {
+
+
+        const list=document.createElement('li');
+        list.classList.add('list');
+
+        const task= document.createTextNode(inputvalue.value);
+        list.appendChild(task);
+
+        allTask.appendChild(list);
+
+        inputvalue.value=null;
+         }
+         else{
+           alert("enter the task first");
+         }
+
+
+
+
+
+    }
+</script>
 
 {% endblock %}

@@ -10,8 +10,8 @@
     </title>
     {% endblock %}
 </head>
-<body>
-
+<body id="container">
+    {% block container %}
     <nav id="navbar">
         {% block navbar %}
 
@@ -31,5 +31,7 @@
         {% block footer %}
         {% endblock %}
     </div>
+
+ {% endblock %}
 </body>
 </html>
