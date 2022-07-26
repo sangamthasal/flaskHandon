@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        Title
+        {% endblock %}
+    </title>
+    {% endblock %}
+</head>
+<body>
+
+    <nav id="navbar">
+        {% block navbar %}
+
+         <a href="welcome">Welcome</a>
+         <a href="regForm">Registration</a>
+         <a href="profile">Profile</a>
+         <a href="about">About</a>
+         <a href="todo">To-Do</a>
+
+        {% endblock %}
+    </nav>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div id="footer">
+        {% block footer %}
+        {% endblock %}
+    </div>
+</body>
+</html>
